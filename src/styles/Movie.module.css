@@ -1,0 +1,51 @@
+.movie{
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background: var(--secondary-background-color);
+  margin-bottom: 10px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15); 
+  height:17rem;
+  align-items: center;
+}
+
+.movieImgContainer{
+  margin-right: 7px;
+
+}
+
+.movieImgContainer > img{
+  width: 10rem;
+  border-radius: 3px; 
+
+}
+
+.movieFooter{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.movieFooter > h4{
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  
+}
+
+.movieFooter > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #666;
+}
+
+.movieBtnContainer{
+  width: 50%;
+  margin-bottom: 1rem;
+}
+

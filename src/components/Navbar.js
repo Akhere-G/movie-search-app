@@ -10,8 +10,8 @@ const Navbar = () => {
         <div>
           <Link to='/'>
             <span className={styles.navbarHeader}>
-              <MovieIcon />
               <h3>Movie Search</h3>
+              <MovieIcon />
             </span>
           </Link>
         </div>

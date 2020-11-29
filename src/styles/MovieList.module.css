@@ -1,0 +1,33 @@
+.MovieListContainer{
+  width: 100%;
+  align-items: center;
+}
+
+.MovieListContainer > ul{
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+@media screen and (min-width: 700px){
+.MovieListContainer > ul{
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  list-style-position: inside;
+}
+
+}
+
+
+@media screen and (min-width: 992px){
+.MovieListContainer > ul{
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  list-style-position: inside;
+}
+
+}

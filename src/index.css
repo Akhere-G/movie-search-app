@@ -11,6 +11,8 @@
   --primary-background-color: #fffefd;
   --secondary-background-color: #efeeed;
   --text-primary-color: #311;
+  --text-faded: #444;
+
   --text-secondary-color: #211;
 
   --text-color-light: #fffefe;
@@ -25,7 +27,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-weight: 6000px;
+  font-weight: 300;
   
 }
 
@@ -62,17 +64,18 @@ a:hover{
 button{
   padding: 5px;
   border-radius: 5px;
-  border: solid 1px var(--text-primary-color);
-  background: rgba(0, 0, 0, 0.3);
-  color: var(--text-primary-color);
+  border: solid 1px var(--text-color-light);
+  background: var(--primary-color-1);
+  color: var(--text-color-light);
   transition: var(--transition);
   
 }
 button:hover{
-  background: rgba(0, 0, 0, 0.7);
-  color: var(--text-secondary-color);
-  border: solid 1px var(--text-secondary-color);
+  background: var(--primary-color-2);
+  color: var(--text-color-light-focus);
+  border: solid 1px var(--text-color-light-focus);
   transition: var(--transition);
+  transform: scale(1.05);
   cursor: pointer;
 
 }
@@ -82,7 +85,7 @@ button:hover{
 }
 
 .section{
-  padding: 0.4rem;
+  padding: 0.7rem;
   width: 100%;
   align-items: center;
   margin: 0 auto;
