@@ -32,7 +32,9 @@
 }
 
 html, body {
-  height: 100vh;
+  height: 100%;
+  min-height: 100%;
+  position: relative;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-primary-color);
   background: var(--primary-background-color);
