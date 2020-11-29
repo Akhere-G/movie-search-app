@@ -12,12 +12,14 @@
 
 .movieImgContainer{
   margin-right: 7px;
+  height: 100%;
 
 }
 
 .movieImgContainer > img{
   width: 10rem;
   border-radius: 3px; 
+  height: 100%;
 
 }
 
@@ -45,7 +47,22 @@
 }
 
 .movieBtnContainer{
-  width: 50%;
-  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+
 }
+
+.movieInfo{
+  overflow: hidden;
+  overflow-x: hidden;
+}
+.movieBtnContainer span{
+  width: 4rem;
+  align-content: center;
+}
+
+
+
+
+
 

@@ -18,7 +18,6 @@ const MovieList = () => {
       <ul>
         {movies.map((movie, index) => {
           const { id } = movie;
-          console.log(movie.poster_path);
           return <Movie key={id} {...movie} />;
         })}
       </ul>

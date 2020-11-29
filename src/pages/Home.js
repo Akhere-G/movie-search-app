@@ -6,6 +6,11 @@ import MovieList from "../components/MovieList";
 const Home = () => {
   return (
     <div>
+      {/*TODO: make section of calss
+        home and add justify contetn display
+        flex stuff so when there areno movies ,
+        the search bar doesn't drop
+       */}
       <section className='section'>
         <SearchForm />
         <MovieList />
