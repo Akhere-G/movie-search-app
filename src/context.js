@@ -14,7 +14,7 @@ const api_key = "&api_key=86da44395c78e16acb0a78362f748f79";
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [movies, setMovies] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("Hunger");
+  const [searchTerm, setSearchTerm] = useState("marvel");
 
   const fetchData = useCallback(async () => {
     setLoading(true);
