@@ -11,19 +11,18 @@
   background-repeat: no-repeat;
   background-size: cover ;
   position: relative;
-  overflow: scroll;
+  
+}
+
+.bottomSpace{
+  padding: 0.1rem;
 }
 
 .app > main{
-  margin:  1rem auto;
+  margin:  3.3rem auto;
+  padding-bottom: 50rem;
   width: 100%;
-  overflow: scroll;
-   -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.app > main::-webkit-scrollbar{
-  display: none;
+  flex: 1;
 }
 
 .footer {

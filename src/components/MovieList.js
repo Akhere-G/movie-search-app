@@ -17,8 +17,7 @@ const MovieList = () => {
       <h1>Movies</h1>
       <ul>
         {movies.map((movie, index) => {
-          const { id } = movie;
-          return <Movie key={id} {...movie} />;
+          return <Movie key={index} {...movie} />;
         })}
       </ul>
     </section>
