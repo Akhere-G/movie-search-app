@@ -12,8 +12,15 @@ const Home = () => {
         the search bar doesn't drop
        */}
       <section className='section'>
-        <SearchForm />
-        <MovieList />
+        <article className={styles.home}>
+          <div className={styles.SearchForm}>
+            <SearchForm />
+          </div>
+
+          <div className={styles.MovieList}>
+            <MovieList />
+          </div>
+        </article>
       </section>
     </div>
   );

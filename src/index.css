@@ -67,9 +67,8 @@ a:hover{
 
 
 button, .btn{
-  padding: 5px;
+  padding:  5px;
   border-radius: 5px;
-  border: solid 1px var(--text-color-light);
   background: var(--primary-color-1);
   color: var(--text-color-light);
   transition: var(--transition);
@@ -78,7 +77,6 @@ button, .btn{
 button:hover, .btn:hover{
   background: var(--primary-color-2);
   color: var(--text-color-light-focus);
-  border: solid 1px var(--text-color-light-focus);
   transition: var(--transition);
   transform: scale(1.05);
   cursor: pointer;

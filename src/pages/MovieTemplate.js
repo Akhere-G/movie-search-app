@@ -25,6 +25,8 @@ const MovieTemplate = () => {
         title,
         tagline,
         poster_path,
+        popularity,
+        release_date,
         runtime,
       } = data;
       setMovieInfo({
@@ -34,6 +36,8 @@ const MovieTemplate = () => {
         title,
         tagline,
         poster_path,
+        popularity,
+        release_date,
         runtime,
       });
     } catch (error) {
@@ -49,9 +53,7 @@ const MovieTemplate = () => {
 
   useEffect(() => {
     if (heroRef.current) {
-      console.log(heroRef.current.style);
-      console.log(movieInfo.backdrop_path);
-      heroRef.current.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://image.tmdb.org/t/p/original/${movieInfo.poster_path})`;
+      heroRef.current.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7), rgba(30, 0, 0, 0.9)), url(https://image.tmdb.org/t/p/original/${movieInfo.backdrop_path})`;
     }
   }, [loading, movieInfo]);
 
@@ -64,12 +66,13 @@ const MovieTemplate = () => {
   }
 
   const {
-    backdrop_path,
     genres,
     overview,
     title,
     tagline,
     poster_path,
+    popularity,
+    release_date,
     runtime,
   } = movieInfo;
 
@@ -77,10 +80,18 @@ const MovieTemplate = () => {
     <section className={styles.movieTemplate}>
       <div className={styles.hero} ref={heroRef}>
         <h1>{title}</h1>
-        <p>{overview}</p>
+        <div className={styles.posterDiv}>
+          <img
+            src={`https://image.tmdb.org/t/p/original/${poster_path}`}
+            alt=''
+          />
+          <p>{overview}</p>
+        </div>
         <h4>{tagline}</h4>
-        <h4>runtime: {runtime}</h4>
-        <h4>genres: {genres.join(", ")}</h4>
+        <h4>Runtime: {runtime}</h4>
+        <h4>Genres: {genres.join(", ")}</h4>
+        <h4>Release Date: {release_date}</h4>
+        <h4>Popularity:{popularity}</h4>
       </div>
     </section>
   );

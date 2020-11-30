@@ -40,17 +40,5 @@
 
 }
 
-@media screen and (min-width: 600px){
-  .app > main{
-  padding: 0 1.8rem;
-  }
 
-}
-
-@media screen and (min-width: 992px){
-  .app > main{
-  padding: 0 3rem;
-  }
-  
-}
 
