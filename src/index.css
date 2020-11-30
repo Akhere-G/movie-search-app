@@ -79,10 +79,6 @@ a:hover{
   transition:  ease-in 300ms;
 }
 
-section{
-  padding: 6rem 0rem;
-}
-
 
 button, .btn{
   padding:  5px;

@@ -22,19 +22,10 @@
   align-items: center;
 }
 
-.navbarHeader{
-  display: flex;
-  align-items: center;
-  width: 100%;
 
-}
-
-.navbarHeader > h3 {
-  margin-right: 5px;
-}
 .navbarLinks{
   display: flex;
-  width: 10rem;
+  flex: 1;
   justify-content: space-around;
 }
 
@@ -45,19 +36,7 @@
   
 }
 
-.navLogo{
-  margin-right: 3px;
-  background-color: var(--primary-color-1);
-  color:  var( --secondary-background-color);
-  padding: 3px;
-  border-radius: 10px;
 
-}
-
-.navLogo > h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
 
 
 .navbarLinks > li:hover{
@@ -69,7 +48,14 @@
 
 @media screen and (min-width: 600px){
   .navbarLinks{
-    width: 15rem;
+  flex: 0.5;
+  }
+
+}
+
+@media screen and (min-width: 992px){
+  .navbarLinks{
+  flex: 0.3;
   }
 
 }

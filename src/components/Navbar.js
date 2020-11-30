@@ -8,12 +8,8 @@ const Navbar = () => {
     <header className={styles.navbarContainer}>
       <nav className={styles.navbarCenter}>
         <div>
-          <Link to='/'>
-            <span className={styles.navbarHeader}>
-              <div className='btn'>
-                <h3>Search Movies</h3>
-              </div>
-            </span>
+          <Link className='btn' to='/'>
+            Search Movies
           </Link>
         </div>
         <ul className={styles.navbarLinks}>
