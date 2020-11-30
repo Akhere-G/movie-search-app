@@ -1,5 +1,5 @@
 .about{
-  margin: 5rem auto;
+  margin: 0 auto;
   align-items: center;
   padding: 0 2rem;
 
@@ -16,7 +16,7 @@
 } 
 }
 
-@media screen and (min-width: 9920px){
+@media screen and (min-width: 992px){
  .about{
   padding: 0 8rem;
 

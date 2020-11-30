@@ -4,7 +4,7 @@
 }
 
 .home{
-  margin: 7rem 0rem;
+  margin: auto 0rem;
   width: 100%;
 
 }
@@ -21,13 +21,13 @@
 @media screen and (min-width: 700px){
   
   .home{
-    margin: 8rem 0rem;
+    margin: auto 0rem;
   }
 }
 
 @media screen and (min-width: 992px){
   
   .home{
-    margin: 10rem 0rem;
+    margin: auto 0rem;
   }
 }

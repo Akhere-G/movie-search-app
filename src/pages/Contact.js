@@ -5,18 +5,15 @@ const Contact = () => {
     <section className='section'>
       <div className={styles.contact}>
         <h3>Contact</h3>
-        <p className={styles.contactParagraph}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque saepe
-          perferendis quasi, quia provident officiis molestiae a quis error ad
-          ipsam maiores at nostrum cum quidem cupiditate. Suscipit, facere
-          consequuntur. Commodi similique illo natus ut odit velit, doloremque
-          iure voluptatem alias? Quo error enim, consequatur eligendi doloremque
-          debitis fuga praesentium ipsa delectus est id perspiciatis optio
-          consequuntur totam eos consectetur. Iste est ullam magni, illum ea
-          odio tenetur adipisci aut? Voluptates quae aliquid consectetur
-          architecto tempore maiores molestiae. Tempora vitae magni doloribus,
-          incidunt a nulla impedit cupiditate porro eveniet distinctio?
+        <p>
+          If you have any questions, I am happy to answer on my email. On my
+          github, you can find many of my projects, web apps and also a few Java
+          projects I have done in my spare time. I look forward to hearing from
+          you.
         </p>
+        <br />
+        <p>Email: AkhereAIhoeghinlan@gmail.com</p>
+        <p>Github: Akhere-G</p>
       </div>
     </section>
   );
