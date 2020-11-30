@@ -1,0 +1,19 @@
+.movieTemplate{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hero{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  color: #fff;
+  padding: 0.6rem;
+  width: 100%;
+  height: 100%;
+
+}
+

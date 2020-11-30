@@ -10,7 +10,7 @@ const Movie = ({ id, title, popularity, poster_path, release_date }) => {
         <img
           src={
             poster_path
-              ? `https://image.tmdb.org/t/p/w185${poster_path}`
+              ? `https://image.tmdb.org/t/p/original/${poster_path}`
               : notFoundSrc
           }
           alt={title}
@@ -23,8 +23,10 @@ const Movie = ({ id, title, popularity, poster_path, release_date }) => {
           <p>score: {popularity}%</p>
         </div>
         <div className={styles.movieBtnContainer}>
-          <span className='btn'>
-            <Link to={`/movie/${id}`}>details</Link>
+          <span>
+            <Link className='btn' to={`/movie/${id}`}>
+              details
+            </Link>
           </span>
         </div>
       </div>
