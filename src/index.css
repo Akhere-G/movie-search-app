@@ -110,6 +110,8 @@ button:hover, .btn:hover{
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
+  margin-bottom: 5rem;
+
 }
 
 
