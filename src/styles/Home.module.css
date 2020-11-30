@@ -4,10 +4,13 @@
 }
 
 .home{
-  margin: auto 1.3rem;
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
+  width: 100%;
 }
 .MovieList{
   margin-top: 0.2rem;
+
 }
 
 .SearchForm{

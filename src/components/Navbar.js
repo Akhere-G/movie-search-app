@@ -11,7 +11,7 @@ const Navbar = () => {
           <Link to='/'>
             <span className={styles.navbarHeader}>
               <div className={styles.navLogo}>
-                <h3>Movie Search</h3>
+                <h3>Search Movie</h3>
               </div>
             </span>
           </Link>

@@ -7,10 +7,12 @@ const MovieList = () => {
   const { loading, movies } = useGlobalState();
 
   if (loading) {
-    return <h1>Loading</h1>;
+    return <h1 className={styles.MovieListContainer}>Loading...</h1>;
   }
   if (movies.length < 1) {
-    return <h1>No Movies</h1>;
+    return (
+      <h1 className={styles.MovieListContainer}>No Movies with that Title</h1>
+    );
   }
   return (
     <section className={styles.MovieListContainer}>

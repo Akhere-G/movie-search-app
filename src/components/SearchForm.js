@@ -14,7 +14,7 @@ const SearchForm = () => {
   };
   return (
     <section className={styles.searchForm}>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.searchFormForm} onSubmit={handleSubmit}>
         <label className={styles.searchFormLabel} htmlFor='SearchInput'>
           Search
         </label>

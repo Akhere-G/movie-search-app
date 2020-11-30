@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import styles from "../styles/MovieTemplate.module.css";
+import notFoundSrc from "../images/ImageNotFound.png";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -82,7 +83,11 @@ const MovieTemplate = () => {
         <h1>{title}</h1>
         <div className={styles.posterDiv}>
           <img
-            src={`https://image.tmdb.org/t/p/original/${poster_path}`}
+            src={
+              poster_path
+                ? `https://image.tmdb.org/t/p/original/${poster_path}`
+                : notFoundSrc
+            }
             alt=''
           />
           <p>{overview}</p>
@@ -91,7 +96,7 @@ const MovieTemplate = () => {
         <h4>Runtime: {runtime}</h4>
         <h4>Genres: {genres.join(", ")}</h4>
         <h4>Release Date: {release_date}</h4>
-        <h4>Popularity:{popularity}</h4>
+        <h4>Popularity: {popularity}</h4>
       </div>
     </section>
   );
