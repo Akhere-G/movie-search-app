@@ -30,7 +30,6 @@ function App() {
           </Route>
         </Switch>
       </main>
-      <div className={styles.bottomSpace}></div>
       <footer className={styles.footer}>
         <span>
           <p>Akhere Ihoeghinlan &copy; 2020</p>

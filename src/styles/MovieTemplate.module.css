@@ -1,36 +1,58 @@
-.movieTemplate{
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
 .hero{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0 auto;
   color: #fff;
-  padding: 1rem 1rem;
+  padding: 7rem 1.3rem;
   width: 100%;
   height: 100%;
   animation-name: shift;
   animation-duration: 7s;
   animation-timing-function: linear;
   -webkit-animation-timing-function: linear;
-
-}
-
-.posterDiv {
   display: flex;
-  margin-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+
 }
-.posterDiv > img {
-  width: 10rem;
-  height: 20rem;
-  margin-right: 10px;
+
+.desktopTitle{
+  display: none;
+}
+.header{
+  padding-bottom:  1rem;
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem ;
+}
+.imgContainer> img {
+  width: 100%;
+  height: 100%;
   border-radius: 3px;
 
+}
+
+.imgContainer{
+  width: 40vw;
+}
+
+.footer{
+  display: flex;
+  width: 100% ;
+  flex-direction: column;
+  padding-bottom: 3rem ;
+}
+
+.footerBtnContainer{
+  margin: 1rem 0 ;
+}
+
+.desktopFooter{
+  display: none;
 }
 
 @keyframes shift {
@@ -43,29 +65,68 @@
 
 
 
+
+
 @media screen and (min-width: 600px){
-  .hero{
-    padding: 1rem 3.6rem;
-  
+  .phoneTitle{
+    display: none;
   }
 
-  .posterDiv > img {
-  width: 12rem;
- 
+  .desktopTitle{
+  display: block;
 }
+
+  .hero{
+    padding: 7rem 3.6rem;
+    padding-bottom: 50rem ;
+    height: 100%;
+  }
+
+  .imgContainer{
+    margin-right: 2rem ;
+    display: flex;
+    flex: 1;
+  }
+
+  .centerInfo{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+  }
+
+  .centerInfo > h1{
+    margin-bottom: 1rem;
+
+  }
+
+
+  .center{
+
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  
+
 }
 
 @media screen and (min-width: 992px){
   .hero{
-    padding: 1rem 5rem;
+    padding: 9rem 7rem;
   }
 
-  .posterDiv {
-    max-width: 50rem;
+
+  .centerInfo{
+    flex: 2;
   }
 
-   .posterDiv > img {
-  width: 16rem;
- 
-}
+  .desktopFooter{
+    padding-top: 1rem ;
+    display: block;
+  }
+
+  .footer{
+    display: none;
+  }
+  
 }

@@ -24,7 +24,6 @@ const MovieTemplate = () => {
         genres,
         overview,
         title,
-        tagline,
         poster_path,
         popularity,
         release_date,
@@ -35,7 +34,6 @@ const MovieTemplate = () => {
         genres: genres.map(genre => genre.name),
         overview,
         title,
-        tagline,
         poster_path,
         popularity,
         release_date,
@@ -70,7 +68,6 @@ const MovieTemplate = () => {
     genres,
     overview,
     title,
-    tagline,
     poster_path,
     popularity,
     release_date,
@@ -78,10 +75,12 @@ const MovieTemplate = () => {
   } = movieInfo;
 
   return (
-    <section className={styles.movieTemplate}>
-      <div className={styles.hero} ref={heroRef}>
-        <h1>{title}</h1>
-        <div className={styles.posterDiv}>
+    <section className={styles.hero} ref={heroRef}>
+      <div className={styles.header}>
+        <h1 className={styles.phoneTitle}>{title}</h1>
+      </div>
+      <div className={styles.center}>
+        <div className={styles.imgContainer}>
           <img
             src={
               poster_path
@@ -90,13 +89,33 @@ const MovieTemplate = () => {
             }
             alt=''
           />
-          <p>{overview}</p>
         </div>
-        <h4>{tagline}</h4>
-        <h4>Runtime: {runtime}</h4>
-        <h4>Genres: {genres.join(", ")}</h4>
-        <h4>Release Date: {release_date}</h4>
-        <h4>Popularity: {popularity}</h4>
+        <div className={styles.centerInfo}>
+          <h1 className={styles.desktopTitle}>{title}</h1>
+          <p>{overview}</p>
+          <div className={styles.desktopFooter}>
+            <p>Runtime: {runtime}</p>
+            <p>Genres: {genres.join(", ")}</p>
+            <p>Release Date: {release_date}</p>
+            <p>Popularity: {popularity}</p>
+            <div className={styles.footerBtnContainer}>
+              <Link className='btn' to='/'>
+                Back
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.footer}>
+        <p>Runtime: {runtime}</p>
+        <p>Genres: {genres.join(", ")}</p>
+        <p>Release Date: {release_date}</p>
+        <p>Popularity: {popularity}</p>
+        <div className={styles.footerBtnContainer}>
+          <Link className='btn' to='/'>
+            Back
+          </Link>
+        </div>
       </div>
     </section>
   );

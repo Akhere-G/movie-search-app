@@ -9,7 +9,7 @@
   padding: 0;
   width: 100%;
   min-height: 100%;
-  height: 100%;
+  height: auto;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,14 +17,11 @@
   
 }
 
-.bottomSpace{
-  padding: 0.1rem;
-}
+
 
 .app > main{
-  margin-top:  3.4rem;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   flex: 1;
 }
 
