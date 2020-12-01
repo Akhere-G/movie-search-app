@@ -5,7 +5,7 @@
 
 }
 
-.searchFormForm{
+.center{
   width: 100%;
   display: flex;
   background-color: var(--secondary-background-color);
@@ -15,13 +15,13 @@
   justify-content: center;
 }
 
-.searchFormLabel{
+.label{
   margin: 0 0.8rem;
   font-size: 2rem;
 
 }
 
-.searchFormInput{
+.searchBar{
   margin-right: 0.8rem;
   width: 50%;
   border-radius: 0.3rem;

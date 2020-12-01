@@ -7,15 +7,13 @@ const MovieList = () => {
   const { loading, movies } = useGlobalState();
 
   if (loading) {
-    return <h1 className={styles.MovieListContainer}>Loading...</h1>;
+    return <h1 className={styles.container}>Loading...</h1>;
   }
   if (movies.length < 1) {
-    return (
-      <h1 className={styles.MovieListContainer}>No Movies with that Title</h1>
-    );
+    return <h1 className={styles.container}>No Movies with that Title</h1>;
   }
   return (
-    <section className={styles.MovieListContainer}>
+    <section className={styles.container}>
       <h1>Movies</h1>
       <ul>
         {movies.map((movie, index) => {

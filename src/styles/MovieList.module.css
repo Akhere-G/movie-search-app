@@ -1,4 +1,4 @@
-.MovieListContainer{
+.container{
   width: 100%;
   align-items: center;
   display: flex;
@@ -6,22 +6,22 @@
   margin: 3rem auto;
 }
 
-.MovieListContainer > h1 {
+.container > h1 {
   margin-bottom: 1rem ;
   font-size: 2.3rem;
 }
 
-.MovieListContainer > ul{
+.container > ul{
   width: 100%;
   margin: 0 auto;
   max-width: 1170px;
   display: grid;
-  row-gap: 2rem;
-  column-gap: 2rem;
+  row-gap: 1.5rem;
+  column-gap: 1.5rem;
 }
 
 @media screen and (min-width: 576px) {
-  .MovieListContainer > ul {
+  .container > ul {
     grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
   }
 }

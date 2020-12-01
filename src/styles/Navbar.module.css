@@ -1,4 +1,4 @@
-.navbarContainer{
+.container{
   width: 100%;
   padding: 15px 0px;
   background-color: var( --secondary-background-color);
@@ -6,7 +6,7 @@
 }
 
 
-.navbarCenter{
+.center{
   display: flex;
   margin: 0 auto;
 

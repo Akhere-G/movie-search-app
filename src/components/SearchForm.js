@@ -14,14 +14,14 @@ const SearchForm = () => {
   };
   return (
     <section className={styles.searchForm}>
-      <form className={styles.searchFormForm} onSubmit={handleSubmit}>
-        <label className={styles.searchFormLabel} htmlFor='SearchInput'>
+      <form className={styles.center} onSubmit={handleSubmit}>
+        <label className={styles.label} htmlFor='SearchInput'>
           Search
         </label>
         <input
           type='text'
           id='SearchInput'
-          className={styles.searchFormInput}
+          className={styles.searchBar}
           placeholder='Search films'
           value={searchTerm}
           onChange={handleChange}

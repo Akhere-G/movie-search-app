@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Movie = ({ id, title, popularity, poster_path, release_date }) => {
   return (
     <article className={styles.movie}>
-      <div className={styles.movieImgContainer}>
+      <div className={styles.imgContainer}>
         <img
           src={
             poster_path
@@ -16,18 +16,16 @@ const Movie = ({ id, title, popularity, poster_path, release_date }) => {
           alt={title}
         />
       </div>
-      <div className={styles.movieFooter}>
-        <div className={styles.movieInfo}>
+      <div className={styles.footer}>
+        <div className={styles.info}>
           <h4>{title}</h4>
           <p>release: {release_date}</p>
           <p>score: {popularity}%</p>
         </div>
-        <div className={styles.movieBtnContainer}>
-          <span>
-            <Link className='btn' to={`/movie/${id}`}>
-              details
-            </Link>
-          </span>
+        <div className={styles.btnContainer}>
+          <Link className={`btn ${styles.movieBtn}`} to={`/movie/${id}`}>
+            details
+          </Link>
         </div>
       </div>
     </article>

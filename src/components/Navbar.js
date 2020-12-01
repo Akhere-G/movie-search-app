@@ -10,8 +10,8 @@ const Navbar = () => {
   console.log(pathname);
   const links = ["home", "about", "contact"];
   return (
-    <header className={styles.navbarContainer}>
-      <nav className={styles.navbarCenter}>
+    <header className={styles.container}>
+      <nav className={styles.center}>
         <Link className='btn' to='/'>
           Search Movies
         </Link>
