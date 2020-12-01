@@ -8,29 +8,43 @@ const Pagination = ({
   setSearchPage,
   searchPageMax,
   itemsPerPage,
+  scrollBackUp,
 }) => {
   const pageMax = Math.round(searchPageMax / itemsPerPage);
+
+  let scrollTop = () => {};
+  if (scrollBackUp) {
+    scrollTop = () => {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 10);
+    };
+  }
   useEffect(() => {
     setSearchPage(1);
   }, []);
   return (
-    <div className={styles.container}>
-      <div className={styles.pagination}>
-        {searchPage !== 1 && (
-          <span
-            className={styles.page}
-            onClick={() => {
-              setSearchPage(prev => Math.max(prev - 1, 0));
-            }}
-          >
-            <ChevronLeftIcon />
-          </span>
-        )}
+    <div className={styles.pagination}>
+      <div className={styles.container}>
+        <span
+          className={`${styles.page} ${
+            searchPage < 2 && styles.pageUnClickable
+          }`}
+          onClick={() => {
+            if (searchPage > 1) {
+              setSearchPage(prev => prev - 1);
+              scrollTop();
+            }
+          }}
+        >
+          <ChevronLeftIcon />
+        </span>
         {searchPage > 2 && (
           <span
             className={styles.page}
             onClick={() => {
               setSearchPage(1);
+              scrollTop();
             }}
           >
             1
@@ -39,18 +53,17 @@ const Pagination = ({
         {searchPage > 2 && (
           <span className={`${styles.page} ${styles.pageNoClick}`}>...</span>
         )}
-
         {searchPage > 1 && (
           <span
             className={styles.page}
             onClick={() => {
               setSearchPage(prev => prev - 1);
+              scrollTop();
             }}
           >
             {searchPage - 1}
           </span>
         )}
-
         <span className={`${styles.page} ${styles.pageActive}`}>
           {searchPage}
         </span>
@@ -59,6 +72,7 @@ const Pagination = ({
             className={styles.page}
             onClick={() => {
               setSearchPage(prev => prev + 1);
+              scrollTop();
             }}
           >
             {searchPage + 1}
@@ -67,27 +81,30 @@ const Pagination = ({
         {searchPage < pageMax - 1 && (
           <span className={`${styles.page} ${styles.pageNoClick}`}>...</span>
         )}
-
         {searchPage < pageMax - 1 && (
           <span
             className={styles.page}
             onClick={() => {
               setSearchPage(pageMax);
+              scrollTop();
             }}
           >
             {pageMax}
           </span>
         )}
-        {searchPage !== pageMax && (
-          <span
-            className={styles.page}
-            onClick={() => {
-              setSearchPage(prev => Math.min(prev + 1, pageMax));
-            }}
-          >
-            <ChevronRightIcon />
-          </span>
-        )}
+        <span
+          className={`${styles.page} ${
+            searchPage > pageMax - 1 && styles.pageUnClickable
+          }`}
+          onClick={() => {
+            if (searchPage < pageMax) {
+              setSearchPage(prev => prev + 1);
+              scrollTop();
+            }
+          }}
+        >
+          <ChevronRightIcon />
+        </span>
       </div>
     </div>
   );

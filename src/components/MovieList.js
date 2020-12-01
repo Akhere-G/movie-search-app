@@ -47,7 +47,7 @@ const MovieList = () => {
           return <Movie key={index} {...movie} />;
         })}
       </ul>
-      <Pagination {...paginationProps} />
+      <Pagination {...paginationProps} scrollBackUp={true} />
     </section>
   );
 };

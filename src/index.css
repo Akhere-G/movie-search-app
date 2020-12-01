@@ -1,18 +1,13 @@
 :root{
-  --primary-color-1: #b11f14;
-  --primary-color-2: #ff4040;
+  --primary-color-1: #ff4040;
+  --primary-color-2: #b11f14;
 
+  --primary-background-color-1: #222224;
+  --primary-background-color-2: #111114;
 
-
-  --primary-background-color: #222226;
-  --secondary-background-color: #111114;
-  --text-primary-color: #fff;
-
-  --text-secondary-color: #fff;
-
-  --text-color-light: #fffefe;
-  --text-color-light-focus: #fff;
-
+  --text-primary-color-1: #fff;
+  --text-primary-color-2: #eee;
+  --text-primary-color-3: #bbb;
 
   --transition: all ease-in-out 300ms;
 
@@ -31,8 +26,8 @@
 
 html, body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--text-primary-color);
-  background: var(--primary-background-color);
+  color: var(--text-primary-color-2);
+  background: var(--primary-background-color-1);
   scroll-behavior: smooth;
   line-height: 1.4;
   font-size: 1rem;
@@ -48,6 +43,8 @@ h4,
 h5,
 h6 {
   letter-spacing: 0.3em;
+  color: var(--text-primary-color-1);
+
 }
 
 p{
@@ -55,7 +52,7 @@ p{
   font-weight: 200;
   letter-spacing: 0.23em;
   font-size: 0.8rem;
-  color: #ccc;
+  color: var(--text-primary-color-3);
   
 }
 
@@ -66,13 +63,13 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--text-color-light);
+  color: var(--text-primary-color-2);
   transition: var(--transition);
   
 }
 
 a:hover, a:focus, a:active{
-  color: var(--text-color-light-focus);
+  color: var(--text-primary-color-1);
   transition:  ease-in 300ms;
   transform: scale(1.03);
 }
@@ -83,15 +80,15 @@ a:hover, a:focus, a:active{
 button, .btn{
   padding:  0.2em;
   border-radius: 0.2em;
-  background: var(--primary-color-1);
+  background: var(--primary-color-2);
   color: var(--text-color-light);
   transition: var(--transition);
   border: none;
   
 }
 button:hover, .btn:hover{
-  background: var(--primary-color-2);
-  color: var(--text-color-light-focus);
+  background: var(--primary-color-1);
+  color: var(--text-primary-color-1);
   transition: var(--transition);
   cursor: pointer;
 
@@ -107,12 +104,12 @@ button:hover, .btn:hover{
 }
 
 .link > a {
-  color: #fff;
+  color: var(--text-primary-color-1);
   transition: var(--transition)
 
 }
 .link > a:hover{
-  color: var(--primary-color-2);
+  color: var(--primary-color-1);
   transition: var(--transition)
 
 }
@@ -122,7 +119,6 @@ button:hover, .btn:hover{
   transition: var(--transition)
 
 }
-
 
 
 

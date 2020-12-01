@@ -8,7 +8,7 @@
 .center{
   width: 100%;
   display: flex;
-  background-color: var(--secondary-background-color);
+  background-color: var(--primary-background-color-2);
   padding: 1rem;
   border-radius: 0.3rem;
   align-items: center;

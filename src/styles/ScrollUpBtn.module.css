@@ -2,7 +2,7 @@
   position: fixed;
   bottom: -12%;
   right: 10%;
-  background: #000005;
+  background: #05050c;
   padding: 0.5rem;
   border-radius: 100%;
   width: 3rem;
@@ -23,7 +23,7 @@
 } 
 
 .scrollUpBtn:hover{
-  color: var(--primary-color-2);
+  color: var(--primary-color-1);
   cursor: pointer;
   transition: ease-in-out 200ms; 
   transform: scale(1.1);
@@ -31,6 +31,15 @@
 
 
 .scrollUpBtn svg{
-  color: var(--primary-color-1)
+  color: var(--primary-color-2);
+  transition: ease-in-out 200ms; 
+
+
+}
+
+.scrollUpBtn svg:hover{
+  color: var(--primary-color-1);
+  transition: ease-in-out 200ms; 
+
 
 }
