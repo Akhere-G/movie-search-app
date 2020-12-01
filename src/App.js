@@ -1,5 +1,5 @@
 import styles from "./styles/App.module.css";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";

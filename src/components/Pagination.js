@@ -21,7 +21,7 @@ const Pagination = ({
   }
   useEffect(() => {
     setSearchPage(1);
-  }, []);
+  }, [setSearchPage]);
   return (
     <div className={styles.pagination}>
       <div className={styles.container}>
