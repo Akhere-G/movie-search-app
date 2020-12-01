@@ -86,7 +86,7 @@ button, .btn{
   border: none;
   
 }
-button:hover, .btn:hover{
+button:hover, .btn:hover, button:focus, .btn:focus{
   background: var(--primary-color-1);
   color: var(--text-primary-color-1);
   transition: var(--transition);
@@ -108,17 +108,29 @@ button:hover, .btn:hover{
   transition: var(--transition)
 
 }
-.link > a:hover{
+.link > a:hover, .link > a:focus {
   color: var(--primary-color-1);
   transition: var(--transition)
 
 }
 
 .currentLink > a{
-  color: var(--primary-color-2);
+  color: var(--primary-color-1);
   transition: var(--transition)
 
 }
 
+.loader {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid var(--primary-color-2);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 

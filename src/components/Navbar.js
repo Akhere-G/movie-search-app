@@ -7,7 +7,6 @@ const Navbar = () => {
   if (pathname.startsWith("/")) {
     pathname = pathname.substring(1);
   }
-  console.log(pathname);
   const links = ["home", "about", "contact"];
   return (
     <header className={styles.container}>

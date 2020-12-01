@@ -31,7 +31,12 @@ const MovieList = () => {
   };
 
   if (loading) {
-    return <h1 className={styles.container}>Loading...</h1>;
+    return (
+      <div className={styles.container}>
+        <h1>Loading...</h1>
+        <div className='loader'></div>
+      </div>
+    );
   }
   if (movies.length < 1) {
     return <h1 className={styles.container}>No Movies with that Title</h1>;

@@ -18,7 +18,6 @@ const MovieTemplate = () => {
     try {
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data);
       const {
         backdrop_path,
         genres,
@@ -57,7 +56,12 @@ const MovieTemplate = () => {
   }, [loading, movieInfo]);
 
   if (loading) {
-    return <h2>Loading...</h2>;
+    return (
+      <div className={styles.container}>
+        <h1>Loading...</h1>
+        <div className='loader'></div>
+      </div>
+    );
   }
 
   if (!movieInfo) {

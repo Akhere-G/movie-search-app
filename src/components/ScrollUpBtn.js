@@ -9,8 +9,6 @@ const ScrollUpBtn = () => {
     scrollFunction();
   };
 
-  let display = "";
-
   function scrollFunction() {
     if (
       document.body.scrollTop > 500 ||
@@ -20,7 +18,6 @@ const ScrollUpBtn = () => {
     } else {
       setShowScroll(false);
     }
-    console.log("here", display);
   }
 
   const scrollTop = () => {
