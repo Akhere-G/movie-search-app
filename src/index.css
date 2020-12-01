@@ -59,6 +59,7 @@ p{
 
 li {
   list-style: none;
+  font-size: 0.9rem;
 }
 
 a {
@@ -111,8 +112,11 @@ button:hover, .btn:hover, button:focus, .btn:focus{
 .link > a:hover, .link > a:focus {
   color: var(--primary-color-1);
   transition: var(--transition)
+  
 
 }
+
+
 
 .currentLink > a{
   color: var(--primary-color-1);
@@ -134,3 +138,9 @@ button:hover, .btn:hover, button:focus, .btn:focus{
   100% { transform: rotate(360deg); }
 }
 
+
+@media screen and (min-width: 600px){
+  li {
+  font-size: 1.12rem;
+}
+}

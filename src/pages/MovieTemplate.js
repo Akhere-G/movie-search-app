@@ -8,6 +8,7 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 const MovieTemplate = () => {
   const heroRef = useRef(null);
   const [loading, setLoading] = useState(true);
+  const [readMore, setReadMore] = useState(false);
   const [movieInfo, setMovieInfo] = useState(null);
 
   const { id } = useParams();
@@ -92,7 +93,17 @@ const MovieTemplate = () => {
       </div>
       <div className={styles.center}>
         <h1>{title}</h1>
-        <p>{overview}</p>
+        <div className={styles.readMoreContainer}>
+          <p className={`${readMore && styles.readMore}`}>{overview}</p>
+          <span
+            className={styles.readMoreBtn}
+            onClick={() => {
+              setReadMore(prev => !prev);
+            }}
+          >
+            {readMore ? "show less" : "read more"}
+          </span>
+        </div>
         <div className={styles.footer}>
           <p>Runtime: {runtime}</p>
           <p>Genres: {genres.join(", ")}</p>
