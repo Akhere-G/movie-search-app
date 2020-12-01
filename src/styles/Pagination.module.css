@@ -1,0 +1,44 @@
+.container{
+  width: 100%;
+  margin: auto;
+}
+
+.pagination{
+  width: 100%;
+  margin: 1em auto; 
+  justify-content: center;
+  display: flex;
+ 
+}
+
+.page{
+  padding: 0.2em 0.4em;
+  margin: 0.05em;
+  border-radius: 5%;
+  text-align: center;
+  display: flex;
+  background-color: var(--secondary-background-color);
+  cursor: pointer;
+  transition: var(--transition);
+
+}
+
+.page:hover{
+  color: var(--primary-color-2);
+  transition: var(--transition);
+
+}
+
+.pageNoClick{
+  cursor: default;
+}
+
+.pageNoClick:hover{
+  color: #fff;
+  transition: var(--transition);
+
+}
+
+.pageActive{
+  color: var(--primary-color-2);
+}

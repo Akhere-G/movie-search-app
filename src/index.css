@@ -1,6 +1,7 @@
 :root{
-  --primary-color-1: #790f08;
-  --primary-color-2: #b11f14;
+  --primary-color-1: #b11f14;
+  --primary-color-2: #ff4040;
+
 
 
   --primary-background-color: #222226;
@@ -105,8 +106,20 @@ button:hover, .btn:hover{
   padding: 1rem;
 }
 
+.link > a {
+  color: #fff;
+  transition: var(--transition)
+
+}
+.link > a:hover{
+  color: var(--primary-color-2);
+  transition: var(--transition)
+
+}
+
 .currentLink > a{
   color: var(--primary-color-2);
+  transition: var(--transition)
 
 }
 

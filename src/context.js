@@ -31,7 +31,7 @@ const AppProvider = ({ children }) => {
       });
       setMovies(newMovies);
       setSearchPage(1);
-      setSearchPageMax(newMovies.length / 9);
+      setSearchPageMax(newMovies.length);
     } catch (error) {
       setMovies([]);
 

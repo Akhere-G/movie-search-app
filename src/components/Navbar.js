@@ -17,7 +17,7 @@ const Navbar = () => {
         </Link>
         <ul className={styles.navbarLinks}>
           {links.map((link, index) => {
-            let className = "";
+            let className = "link";
             if (link === pathname) {
               className = "currentLink";
             } else if (link === "home" && pathname === "") {
