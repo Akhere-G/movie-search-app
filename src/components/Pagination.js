@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import styles from "../styles/Pagination.module.css";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 const Pagination = ({
   searchPage,
   setSearchPage,
