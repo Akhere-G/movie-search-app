@@ -10,18 +10,15 @@ const MovieList = () => {
     searchPage,
     setSearchPage,
     searchPageMax,
-    setSearchPageMax,
   } = useGlobalState();
   const moviesPerPage = 5;
   const startOfPage = moviesPerPage * (searchPage - 1);
   const endOfPage = moviesPerPage * searchPage;
 
-  const [movies, setMovies] = useState(
-    [...allMovies].slice(startOfPage, endOfPage)
-  );
+  const [movies, setMovies] = useState(allMovies.slice(startOfPage, endOfPage));
   useEffect(() => {
     setMovies([...allMovies].slice(startOfPage, endOfPage));
-  }, [searchPage, searchPageMax, allMovies]);
+  }, [searchPage, searchPageMax, allMovies, endOfPage, startOfPage]);
 
   const paginationProps = {
     searchPage,

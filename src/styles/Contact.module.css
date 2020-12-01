@@ -11,14 +11,14 @@
 }
 
 @media screen and (min-width: 600px){
- .contact{
+  .contact{
   padding: 0 5rem;
 
 } 
 }
 
 @media screen and (min-width: 992px){
- .contact{
+  .contact{
   padding: 0 8rem;
 
 } 

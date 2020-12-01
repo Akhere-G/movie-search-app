@@ -12,14 +12,14 @@
 }
 
 @media screen and (min-width: 600px){
- .about{
+  .about{
   padding: 0 5rem;
 
 } 
 }
 
 @media screen and (min-width: 992px){
- .about{
+  .about{
   padding: 0 8rem;
 
 } 
