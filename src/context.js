@@ -17,6 +17,8 @@ const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("marvel");
+  const [searchPage, setSearchPage] = useState(1);
+  const [searchPageMax, setSearchPageMax] = useState(1);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -28,8 +30,13 @@ const AppProvider = ({ children }) => {
         return { id, title, popularity, poster_path, release_date };
       });
       setMovies(newMovies);
+      setSearchPage(1);
+      setSearchPageMax(newMovies.length / 9);
     } catch (error) {
       setMovies([]);
+
+      setSearchPage(1);
+      setSearchPageMax(1);
       console.log(error);
     }
     setLoading(false);
@@ -47,6 +54,10 @@ const AppProvider = ({ children }) => {
         setMovies,
         searchTerm,
         setSearchTerm,
+        searchPage,
+        setSearchPage,
+        searchPageMax,
+        setSearchPageMax,
       }}
     >
       {children}

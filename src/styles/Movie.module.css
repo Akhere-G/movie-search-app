@@ -64,17 +64,13 @@
 }
 
 .movieBtn{
-  width: 25%;
+  width: 30%;
 }
 
 @media screen and (min-width: 600px){
   .imgContainer{
   width: 50%;
   
-}
-
-.movieBtn{
-  width: 30%;
 }
 }
 
