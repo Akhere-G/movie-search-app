@@ -36,7 +36,7 @@ const Pagination = ({
             }
           }}
         >
-          <ChevronLeftIcon />
+          {"<"}
         </span>
         {searchPage > 2 && (
           <span
@@ -102,7 +102,7 @@ const Pagination = ({
             }
           }}
         >
-          <ChevronRightIcon />
+          {">"}
         </span>
       </div>
     </div>

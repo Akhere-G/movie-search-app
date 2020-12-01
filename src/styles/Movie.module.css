@@ -63,9 +63,7 @@
   text-align: center;
 }
 
-.movieBtn{
-  width: 30%;
-}
+
 
 @media screen and (min-width: 600px){
   .imgContainer{

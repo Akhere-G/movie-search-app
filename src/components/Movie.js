@@ -23,7 +23,7 @@ const Movie = ({ id, title, popularity, poster_path, release_date }) => {
           <p>score: {popularity}%</p>
         </div>
         <div className={styles.btnContainer}>
-          <Link className={`btn ${styles.movieBtn}`} to={`/movie/${id}`}>
+          <Link className='btn' to={`/movie/${id}`}>
             details
           </Link>
         </div>

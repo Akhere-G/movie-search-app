@@ -36,7 +36,6 @@
 .pageUnClickable{
   cursor: default;
   color: #444;
-  font-size: large;
 }
 
 .pageUnClickable:hover{
