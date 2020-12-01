@@ -1,27 +1,35 @@
 import React from "react";
 import styles from "../styles/Navbar.module.css";
-import { Link, BrowserRouter as Router } from "react-router-dom";
-import MovieIcon from "@material-ui/icons/Movie";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  let { pathname } = useLocation();
+  if (pathname.startsWith("/")) {
+    pathname = pathname.substring(1);
+  }
+  console.log(pathname);
+  const links = ["home", "about", "contact"];
   return (
     <header className={styles.navbarContainer}>
       <nav className={styles.navbarCenter}>
-        <div>
-          <Link className='btn' to='/'>
-            Search Movies
-          </Link>
-        </div>
+        <Link className='btn' to='/'>
+          Search Movies
+        </Link>
         <ul className={styles.navbarLinks}>
-          <li className={styles.navbarLink}>
-            <Link to='/'>home</Link>
-          </li>
-          <li className={styles.navbarLink}>
-            <Link to='/about'>about</Link>
-          </li>
-          <li className={styles.navbarLink}>
-            <Link to='/contact'>contact</Link>
-          </li>
+          {links.map((link, index) => {
+            let className = "";
+            if (link === pathname) {
+              className = "currentLink";
+            } else if (link === "home" && pathname === "") {
+              className = "currentLink";
+            }
+
+            return (
+              <li key={index} className={className}>
+                <Link to={link === "home" ? "/" : `/${link}`}>{`${link}`}</Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>

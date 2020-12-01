@@ -29,9 +29,6 @@
 }
 
 html, body {
-  height: 100%;
-  min-height: 100%;
-  position: relative;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-primary-color);
   background: var(--primary-background-color);
@@ -49,13 +46,13 @@ h3,
 h4,
 h5,
 h6 {
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.3em;
 }
 
 p{
-  line-height: 1.5rem;
+  line-height: 1.5em;
   font-weight: 200;
-  letter-spacing: 2px;
+  letter-spacing: 0.23em;
   font-size: 0.8rem;
   color: #ccc;
   
@@ -70,19 +67,21 @@ a {
   text-decoration: none;
   color: var(--text-color-light);
   transition: var(--transition);
-  transform: scale(10);
-
+  
 }
 
-a:hover{
+a:hover, a:focus, a:active{
   color: var(--text-color-light-focus);
   transition:  ease-in 300ms;
+  transform: scale(1.03);
 }
+
+
 
 
 button, .btn{
-  padding:  5px;
-  border-radius: 5px;
+  padding:  0.2em;
+  border-radius: 0.2em;
   background: var(--primary-color-1);
   color: var(--text-color-light);
   transition: var(--transition);
@@ -93,28 +92,21 @@ button:hover, .btn:hover{
   background: var(--primary-color-2);
   color: var(--text-color-light-focus);
   transition: var(--transition);
-  transform: scale(1.05);
   cursor: pointer;
 
 }
 
-.btn-container{
+
+
+.section{
+  margin: 5rem auto;
   padding: 1rem;
 }
 
-.section{
-  padding: 0.7rem;
-  width: 100%;
-  align-items: center;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+.currentLink > a{
+  color: var(--primary-color-2);
 
 }
-
-
 
 
 

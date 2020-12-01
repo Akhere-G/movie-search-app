@@ -9,7 +9,7 @@ import MovieTemplate from "./pages/MovieTemplate";
 
 function App() {
   return (
-    <div className={styles.app}>
+    <div>
       <Navbar />
       <main>
         <Switch>
@@ -31,9 +31,7 @@ function App() {
         </Switch>
       </main>
       <footer className={styles.footer}>
-        <span>
-          <p>Akhere Ihoeghinlan &copy; 2020</p>
-        </span>
+        <p>Akhere Ihoeghinlan &copy; 2020</p>
       </footer>
     </div>
   );

@@ -3,8 +3,6 @@
   padding: 15px 0px;
   background-color: var( --secondary-background-color);
   
-  position: fixed;
-  top: 0;
 }
 
 
@@ -15,7 +13,7 @@
   width: 90vw;
   max-width: 1170px ;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   
 }
 .navbarCenter > div {
@@ -27,22 +25,6 @@
   display: flex;
   flex: 1;
   justify-content: space-around;
-}
-
-
-.navbarLinks > li{
-  transition: var(--transition);
-  
-  
-}
-
-
-
-
-.navbarLinks > li:hover{
-  transition: var(--transition);
-  transform: scale(1.1);
-
 }
 
 
