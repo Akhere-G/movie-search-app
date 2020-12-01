@@ -1,0 +1,36 @@
+.scrollUpBtn{
+  position: fixed;
+  bottom: -12%;
+  right: 10%;
+  background: #000005;
+  padding: 0.5rem;
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem; 
+  align-items: center;
+  display: flex;
+  z-index: 99;
+  justify-content: center;
+  transition: ease-in-out 200ms;
+  transform: scale(0.5); 
+}
+
+.show {
+  bottom: 15%;
+  transform: scale(1); 
+  transition: ease-in-out 200ms; 
+
+} 
+
+.scrollUpBtn:hover{
+  color: var(--primary-color-2);
+  cursor: pointer;
+  transition: ease-in-out 200ms; 
+  transform: scale(1.1);
+}
+
+
+.scrollUpBtn svg{
+  color: var(--primary-color-1)
+
+}

@@ -4,8 +4,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
 import MovieTemplate from "./pages/MovieTemplate";
+import Navbar from "./components/Navbar";
+import ScrollUpBtn from "./components/ScrollUpBtn";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           </Route>
         </Switch>
       </main>
+      <ScrollUpBtn />
       <footer className={styles.footer}>
         <p>Akhere Ihoeghinlan &copy; 2020</p>
       </footer>
