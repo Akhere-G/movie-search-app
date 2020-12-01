@@ -76,45 +76,29 @@ const MovieTemplate = () => {
 
   return (
     <section className={styles.hero} ref={heroRef}>
-      <div className={styles.header}>
-        <h1 className={styles.phoneTitle}>{title}</h1>
+      <div className={styles.imgContainer}>
+        <img
+          src={
+            poster_path
+              ? `https://image.tmdb.org/t/p/original/${poster_path}`
+              : notFoundSrc
+          }
+          alt=''
+        />
       </div>
       <div className={styles.center}>
-        <div className={styles.imgContainer}>
-          <img
-            src={
-              poster_path
-                ? `https://image.tmdb.org/t/p/original/${poster_path}`
-                : notFoundSrc
-            }
-            alt=''
-          />
-        </div>
-        <div className={styles.centerInfo}>
-          <h1 className={styles.desktopTitle}>{title}</h1>
-          <p>{overview}</p>
-          <div className={styles.desktopFooter}>
-            <p>Runtime: {runtime}</p>
-            <p>Genres: {genres.join(", ")}</p>
-            <p>Release Date: {release_date}</p>
-            <p>Popularity: {popularity}</p>
-            <div className={styles.footerBtnContainer}>
-              <Link className='btn' to='/'>
-                Back
-              </Link>
-            </div>
+        <h1>{title}</h1>
+        <p>{overview}</p>
+        <div className={styles.footer}>
+          <p>Runtime: {runtime}</p>
+          <p>Genres: {genres.join(", ")}</p>
+          <p>Release Date: {release_date}</p>
+          <p>Popularity: {popularity}</p>
+          <div className={styles.footerBtnContainer}>
+            <Link className='btn' to='/'>
+              Back
+            </Link>
           </div>
-        </div>
-      </div>
-      <div className={styles.footer}>
-        <p>Runtime: {runtime}</p>
-        <p>Genres: {genres.join(", ")}</p>
-        <p>Release Date: {release_date}</p>
-        <p>Popularity: {popularity}</p>
-        <div className={styles.footerBtnContainer}>
-          <Link className='btn' to='/'>
-            Back
-          </Link>
         </div>
       </div>
     </section>
