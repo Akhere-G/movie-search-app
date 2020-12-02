@@ -61,8 +61,12 @@
 
 
 .readMore{
-  height: 5rem;
+  height: 3rem;
   overflow: hidden;
+  transition: var(--transition);
+}
+
+.showLess{
   transition: var(--transition);
 }
 

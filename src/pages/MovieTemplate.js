@@ -94,14 +94,16 @@ const MovieTemplate = () => {
       <div className={styles.center}>
         <h1>{title}</h1>
         <div className={styles.readMoreContainer}>
-          <p className={`${readMore && styles.readMore}`}>{overview}</p>
+          <p className={`${readMore ? styles.readMore : styles.showLess}`}>
+            {overview}
+          </p>
           <span
             className={styles.readMoreBtn}
             onClick={() => {
               setReadMore(prev => !prev);
             }}
           >
-            {readMore ? "show less" : "read more"}
+            {readMore ? "read more" : "show less"}
           </span>
         </div>
         <div className={styles.footer}>
