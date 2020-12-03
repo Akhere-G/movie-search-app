@@ -22,6 +22,7 @@
   box-sizing: border-box;
   font-weight: 300;
   
+  
 }
 
 html, body {
@@ -43,6 +44,7 @@ h5,
 h6 {
   letter-spacing: 0.3em;
   color: var(--text-primary-color-1);
+  
 
 }
 
@@ -85,6 +87,7 @@ button, .btn{
   color: var(--text-color-light);
   transition: var(--transition);
   border: none;
+  box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.3);
   
 }
 button:hover, .btn:hover, button:focus, .btn:focus{
