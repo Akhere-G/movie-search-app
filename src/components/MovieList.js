@@ -3,6 +3,7 @@ import { useGlobalState } from "../context";
 import Movie from "./Movie";
 import styles from "../styles/MovieList.module.css";
 import Pagination from "../components/Pagination";
+import Loader from "./Loader";
 const MovieList = () => {
   const {
     loading,
@@ -28,12 +29,7 @@ const MovieList = () => {
   };
 
   if (loading) {
-    return (
-      <div className={styles.container}>
-        <h1>Loading...</h1>
-        <div className='loader'></div>
-      </div>
-    );
+    <Loader />;
   }
   if (movies.length < 1) {
     return <h1 className={styles.container}>No Movies with that Title</h1>;
