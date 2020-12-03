@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styles from "../styles/MovieTemplate.module.css";
 import notFoundSrc from "../images/ImageNotFound.png";
-
+import MovieTemplate from "../components/MovieTemplate";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-const MovieTemplate = () => {
+const MovieTemplateContainer = () => {
   const heroRef = useRef(null);
   const [loading, setLoading] = useState(true);
   const [readMore, setReadMore] = useState(false);
@@ -80,46 +80,16 @@ const MovieTemplate = () => {
   } = movieInfo;
 
   return (
-    <section className={styles.hero} ref={heroRef}>
-      <div className={styles.imgContainer}>
-        <img
-          src={
-            poster_path
-              ? `https://image.tmdb.org/t/p/original/${poster_path}`
-              : notFoundSrc
-          }
-          alt=''
-        />
-      </div>
-      <div className={styles.center}>
-        <h1>{title}</h1>
-        <div className={styles.readMoreContainer}>
-          <p className={`${readMore ? styles.readMore : styles.showLess}`}>
-            {overview}
-          </p>
-          <span
-            className={styles.readMoreBtn}
-            onClick={() => {
-              setReadMore(prev => !prev);
-            }}
-          >
-            {readMore ? "read more" : "show less"}
-          </span>
-        </div>
-        <div className={styles.footer}>
-          <p>Runtime: {runtime}</p>
-          <p>Genres: {genres.join(", ")}</p>
-          <p>Release Date: {release_date}</p>
-          <p>Popularity: {popularity}</p>
-          <div className={styles.footerBtnContainer}>
-            <Link className='btn' to='/'>
-              Back
-            </Link>
-          </div>
-        </div>
-      </div>
-    </section>
+    <MovieTemplate
+      {...movieInfo}
+      heroRef={heroRef}
+      src={
+        poster_path
+          ? `https://image.tmdb.org/t/p/original/${poster_path}`
+          : notFoundSrc
+      }
+    />
   );
 };
 
-export default MovieTemplate;
+export default MovieTemplateContainer;

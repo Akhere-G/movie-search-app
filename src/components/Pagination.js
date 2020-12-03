@@ -3,7 +3,7 @@ import styles from "../styles/Pagination.module.css";
 const Pagination = ({
   searchPage,
   setSearchPage,
-  searchPageMax,
+  searchPageMax, //number of items
   itemsPerPage,
   scrollBackUp,
 }) => {
