@@ -30,7 +30,6 @@ html, body {
   background: var(--primary-background-color-1);
   scroll-behavior: smooth;
   line-height: 1.4;
-  font-size: 1rem;
   font-weight: 300;
   
   letter-spacing: 2px;
@@ -51,15 +50,16 @@ p{
   line-height: 1.5em;
   font-weight: 200;
   letter-spacing: 0.23em;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   color: var(--text-primary-color-3);
   
 }
 
 
+
 li {
   list-style: none;
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 a {
@@ -141,6 +141,6 @@ button:hover, .btn:hover, button:focus, .btn:focus{
 
 @media screen and (min-width: 600px){
   li {
-  font-size: 1.12rem;
+  font-size: 1.12em;
 }
 }

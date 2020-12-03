@@ -18,9 +18,9 @@
   background-size: cover;
   padding: 1rem 1.3rem;
   animation-name: shift;
-  animation-duration: 7s;
-  animation-timing-function: linear;
-  -webkit-animation-timing-function: linear;
+  animation-duration: 14s;
+  animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -92,9 +92,8 @@
 
 
 @keyframes shift {
-  0% { background-position: 40% center}
-  50% { background-position: 50% center}
-  100% { background-position:center ;}
+  0% { background-position: 25% center}
+  100% { background-position: center center ;}
 
 
 }
@@ -108,9 +107,11 @@
     padding: 4rem 3.6rem;
     padding-bottom: 50rem ;
     flex-direction: row;
+    animation-duration: 17s;
+
   }
 
- .imgContainer{
+  .imgContainer{
   width: 40%;
   margin-right: 1.5rem;
 }
@@ -127,6 +128,14 @@
   }
 
   
+@keyframes shift {
+  0% { background-position: 35% center}
+  100% { background-position: center center ;}
+
+
+}
+
+  
 
 }
 
@@ -134,11 +143,21 @@
   .hero{
     padding: 5rem 7rem;
     padding-bottom: 30rem;
+    animation-duration: 14s;
+
   }
 
- .imgContainer{
+  .imgContainer{
   width: 25%;
   margin-right: 2rem;
+
+  
+}
+
+@keyframes shift {
+  0% { background-position: 25% center}
+  100% { background-position: center center ;}
+
 
 }
 
