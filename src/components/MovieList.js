@@ -11,7 +11,7 @@ const MovieList = () => {
     setSearchPage,
     searchPageMax,
   } = useGlobalState();
-  const moviesPerPage = 5;
+  const moviesPerPage = 6;
   const startOfPage = moviesPerPage * (searchPage - 1);
   const endOfPage = moviesPerPage * searchPage;
 

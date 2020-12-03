@@ -7,7 +7,7 @@ const Pagination = ({
   itemsPerPage,
   scrollBackUp,
 }) => {
-  const pageMax = Math.round(searchPageMax / itemsPerPage);
+  const pageMax = Math.ceil(searchPageMax / itemsPerPage);
 
   let scrollTop = () => {};
   if (scrollBackUp) {
