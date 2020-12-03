@@ -21,14 +21,14 @@
 
 }
 
-.loading, .img-loading{
+.loading{
   transition: var(--transition);
   opacity: 0;
   width: 100%;
   height: auto;
 }
 
-.loaded, .img-loaded, .is-visible {
+.loaded {
   transition: var(--transition);
   animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1) 1;
   position: relative;

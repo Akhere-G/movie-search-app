@@ -1,27 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "../styles/Movie.module.css";
 import notFoundSrc from "../images/ImageNotFound.png";
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
-
+import ImageLoader from "./ImageLoader";
 const Movie = ({ id, title, popularity, poster_path, release_date }) => {
-  const [loadClass, setLoadClass] = useState("loading");
-
   return (
     <article className={styles.movie}>
       <div className={styles.imgContainer}>
-        <LazyLoad debounce={false} offsetVertical={100}>
-          <img
-            className={`${styles[loadClass]}`}
+        <LazyLoad
+          loadingClass={styles.loading}
+          loadedClass={styles.loaded}
+          debounce={false}
+          offsetVertical={100}
+        >
+          <ImageLoader
             src={
               poster_path
                 ? `https://image.tmdb.org/t/p/original/${poster_path}`
                 : notFoundSrc
             }
             alt={title}
-            onLoad={() => {
-              setLoadClass("loaded");
-            }}
+            loadedClassName={styles.loaded}
+            loadingClassName={styles.loaded}
           />
         </LazyLoad>
       </div>
