@@ -8,7 +8,6 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 const MovieTemplateContainer = () => {
   const heroRef = useRef(null);
   const [loading, setLoading] = useState(true);
-  const [readMore, setReadMore] = useState(false);
   const [movieInfo, setMovieInfo] = useState(null);
 
   const { id } = useParams();
@@ -69,15 +68,7 @@ const MovieTemplateContainer = () => {
     return <h2>no movie found</h2>;
   }
 
-  const {
-    genres,
-    overview,
-    title,
-    poster_path,
-    popularity,
-    release_date,
-    runtime,
-  } = movieInfo;
+  const { poster_path } = movieInfo;
 
   return (
     <MovieTemplate

@@ -41,8 +41,8 @@ const MovieList = () => {
       <Pagination {...paginationProps} />
 
       <ul>
-        {movies.map((movie, index) => {
-          return <Movie key={index} {...movie} />;
+        {movies.map(movie => {
+          return <Movie key={movie.id} {...movie} />;
         })}
       </ul>
       <Pagination {...paginationProps} scrollBackUp={true} />

@@ -41,14 +41,13 @@
 
 @keyframes fadeInImg {
   from {
-    top: -5px;
+    transform: scale(0.5);
     opacity: 0;
   }
 
   to {
-    top: 0;
+    transform: scale(1);
     opacity: 1;
-
   }
 }
 

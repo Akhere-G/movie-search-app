@@ -12,8 +12,8 @@
 }
 
 .page{
-  padding: 0.2rem 0.4rem;
-  margin: 0.05rem;
+  padding: 0.3em 0.7em;
+  margin: 0.15em;
   border-radius: 5%;
   text-align: center;
   display: flex;
@@ -23,25 +23,10 @@
 
 }
 
-.page:hover{
-  color: var(--primary-color-1);
-  transition: var(--transition);
-
-}
-
 .pageNoClick{
   cursor: default;
-}
-
-.pageUnClickable{
-  cursor: default;
   color: #444;
 }
-
-.pageUnClickable:hover{
-  color: #444;
-}
-
 
 .pageNoClick:hover{
   color: var(--text-primary-color-2);
