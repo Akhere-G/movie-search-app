@@ -8,12 +8,7 @@ const Movie = ({ id, title, popularity, poster_path, release_date }) => {
   return (
     <article className={styles.movie}>
       <div className={styles.imgContainer}>
-        <LazyLoad
-          loadingClass={styles.loading}
-          loadedClass={styles.loaded}
-          debounce={false}
-          offsetVertical={100}
-        >
+        <LazyLoad debounce={false} offsetVertical={100}>
           <ImageLoader
             src={
               poster_path
