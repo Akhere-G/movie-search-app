@@ -6,10 +6,9 @@ const About = () => {
       <div className={styles.about}>
         <h3>About Me</h3>
         <p>
-          My name is Akhere Ihoeghinlan. I am a Computer Science student at UCL
-          and a web developer, who is passionate about building intresting
-          websites. I know HTML, CSS, Javascript, React, Java. In my spare time,
-          I make games in Unity and read my favourite fantasy books.
+          This website is built using react for the front end. The api used is
+          themoviedb. A global context is used to manage state and a high order
+          component is used to load images with a fade in animation
         </p>
       </div>
     </section>
