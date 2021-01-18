@@ -1,18 +1,17 @@
-:root{
+:root {
   --primary-color-1: #ff4040;
   --primary-color-2: #b11f14;
 
-  --primary-background-color-1: #222224;
-  --primary-background-color-2: #111114;
-
-  --text-primary-color-1: #fff;
-  --text-primary-color-2: #eee;
-  --text-primary-color-3: #c7c7c7;
-
+  --primary-bg-1: #222224;
+  --primary-bg-2: #111114;
+  --primary-bg-3: #050508;
+  --text-primary-1: #fff;
+  --text-primary-2: #eee;
+  --text-primary-3: #c7c7c7;
+  --max-width: 90%;
   --transition: all ease-in-out 300ms;
-
 }
-#root{
+#root {
   height: 100%;
 }
 
@@ -21,18 +20,17 @@
   padding: 0px;
   box-sizing: border-box;
   font-weight: 300;
-  
-  
 }
 
-html, body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--text-primary-color-2);
-  background: var(--primary-background-color-1);
+html,
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary-2);
+  background: var(--primary-bg-1);
   scroll-behavior: smooth;
   line-height: 1.4;
   font-weight: 300;
-  
+
   letter-spacing: 2px;
 }
 
@@ -43,21 +41,16 @@ h4,
 h5,
 h6 {
   letter-spacing: 0.3em;
-  color: var(--text-primary-color-1);
-  
-
+  color: var(--text-primary-1);
 }
 
-p{
+p {
   line-height: 1.5em;
   font-weight: 200;
   letter-spacing: 0.23em;
   font-size: 0.8em;
-  color: var(--text-primary-color-3);
-  
+  color: var(--text-primary-3);
 }
-
-
 
 li {
   list-style: none;
@@ -66,69 +59,64 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--text-primary-color-2);
+  color: var(--text-primary-2);
   transition: var(--transition);
-  
 }
 
-a:hover, a:focus, a:active{
-  color: var(--text-primary-color-1);
-  transition:  ease-in 300ms;
+a:hover,
+a:focus,
+a:active {
+  color: var(--text-primary-1);
+  transition: ease-in 300ms;
   transform: scale(1.03);
 }
 
-
-
-
-button, .btn{
-  padding:  0.2em;
+button,
+.btn {
+  padding: 0.2em;
   border-radius: 0.2em;
   background: var(--primary-color-2);
   color: var(--text-color-light);
   transition: var(--transition);
   border: none;
   box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.3);
-  
 }
-button:hover, .btn:hover, button:focus, .btn:focus{
+button:hover,
+.btn:hover,
+button:focus,
+.btn:focus {
   background: var(--primary-color-1);
-  color: var(--text-primary-color-1);
+  color: var(--text-primary-1);
   transition: var(--transition);
   cursor: pointer;
-
 }
 
-.btnContainer{
+.btnContainer {
   padding: 1rem 0;
 }
 
-.section{
+.section {
   margin: 1rem auto;
   padding: 1rem;
 }
 
 .link > a {
-  color: var(--text-primary-color-1);
-  transition: var(--transition)
-
+  color: var(--text-primary-1);
+  transition: var(--transition);
 }
-.link > a:hover, .link > a:focus {
+.link > a:hover,
+.link > a:focus {
   color: var(--primary-color-1);
-  transition: var(--transition)
-  
-
+  transition: var(--transition);
 }
 
-
-
-.currentLink > a{
+.currentLink > a {
   color: var(--primary-color-1);
-  transition: var(--transition)
-
+  transition: var(--transition);
 }
 
 .loader {
-  border: 16px solid #f3f3f3; 
+  border: 16px solid #f3f3f3;
   border-top: 16px solid var(--primary-color-2);
   border-radius: 50%;
   width: 120px;
@@ -137,13 +125,16 @@ button:hover, .btn:hover, button:focus, .btn:focus{
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-
-@media screen and (min-width: 600px){
+@media screen and (min-width: 600px) {
   li {
-  font-size: 1.12em;
-}
+    font-size: 1.12em;
+  }
 }

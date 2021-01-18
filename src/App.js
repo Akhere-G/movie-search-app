@@ -4,9 +4,14 @@ import { About, Contact, Error, Home, MovieTemplatePage } from "./pages";
 import { ScrollUpBtn, Navbar } from "./components";
 
 function App() {
+  const links = [
+    { name: "home", slug: "/" },
+    { name: "about", slug: "/about" },
+    { name: "contact", slug: "/contact" },
+  ];
   return (
     <div>
-      <Navbar />
+      <Navbar links={links} title='Search Movies' />
       <main>
         <Switch>
           <Route exact path='/'>

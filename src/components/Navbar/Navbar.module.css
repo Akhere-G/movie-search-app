@@ -1,39 +1,134 @@
-.container{
+.container {
+  background-color: var(--primary-bg-2);
+  z-index: 999;
   width: 100%;
-  padding: 15px 0px;
-  background-color: var( --primary-background-color-2);
-  
+  height: 3rem;
 }
-
-
-.center{
+.navbar {
   display: flex;
-  margin: 0 auto;
-
-  width: 90vw;
-  max-width: 1170px ;
   justify-content: space-between;
   align-items: center;
-  
+  padding: 0.1em 1em;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  z-index: 999;
 }
 
-.navbarLinks{
+.logo {
+  font-size: 1rem;
+  margin: 0.3rem 0rem;
+
+  background-color: var(--primary-color-2);
+  padding: 0.3rem;
+  border-radius: 9px;
+}
+
+.navbarLinks {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -10em;
+  pointer-events: none;
+  opacity: 0;
   display: flex;
-  flex: 1;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-bg-3);
+  transition: var(--transition);
+  z-index: 998;
+  padding: 1rem 0;
+  overflow: hidden;
 }
 
-
-@media screen and (min-width: 600px){
-  .navbarLinks{
-  flex: 0.5;
-  }
-
+.open {
+  top: 3rem;
+  opacity: 1;
+  transition: var(--transition);
+  pointer-events: all;
 }
 
-@media screen and (min-width: 992px){
-  .navbarLinks{
-  flex: 0.3;
+.navbarLink {
+  width: 100%;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.navbarLink > a {
+  width: 100%;
+  height: 100%;
+  padding: 0.5em 0;
+  display: block;
+  color: var(--text-color-1);
+  transition: var(--transition);
+}
+
+.navbarLink a:hover {
+  background-color: var(--primary-bg-2);
+  color: var(--primary-color-1);
+
+  transition: var(--transition);
+}
+
+.activeLink a {
+  color: var(--primary-color-1);
+}
+
+.navbarBtn {
+  font-size: 0.25rem;
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--text-primary-1);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.navbarBtn:hover {
+  transform: rotate(90deg);
+  transition: var(--transition);
+  background-color: transparent;
+}
+
+@media screen and (min-width: 600px) {
+  .navbarBtn {
+    display: none;
+    pointer-events: none;
   }
 
+  .navbarLinks {
+    position: static;
+    flex-direction: row;
+    flex: 1;
+    margin-left: 1em;
+    margin-top: 0;
+    justify-content: flex-end;
+    background-color: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .navbarLink {
+    width: auto;
+    height: auto;
+
+    margin-right: 1em;
+  }
+  .navbarLink > a {
+    width: auto;
+    height: auto;
+    padding: auto;
+    display: block;
+    color: var(--text-primary-1);
+  }
+
+  .navbarLink a:hover {
+    background-color: transparent;
+    color: var(--primary-color-1);
+
+    transition: var(--transition);
+  }
+
+  .activeLink a {
+    color: var(--primary-color-1);
+  }
 }

@@ -1,4 +1,4 @@
-.scrollUpBtn{
+.scrollUpBtn {
   position: fixed;
   bottom: -12%;
   right: 10%;
@@ -6,41 +6,35 @@
   padding: 0.5rem;
   border-radius: 100%;
   width: 3rem;
-  height: 3rem; 
+  height: 3rem;
   align-items: center;
   display: flex;
   z-index: 99;
   justify-content: center;
   transition: ease-in-out 200ms;
-  transform: scale(0.5); 
+  transform: scale(0.5);
   box-shadow: 1px 1px 4px rgb(0, 0, 0, 0.5);
 }
 
 .show {
   bottom: 15%;
-  transform: scale(1); 
-  transition: ease-in-out 200ms; 
+  transform: scale(1);
+  transition: ease-in-out 200ms;
+}
 
-} 
-
-.scrollUpBtn:hover{
-  color: var(--text-primary-color-1);
+.scrollUpBtn:hover {
+  color: var(--text-primary-1);
   cursor: pointer;
-  transition: ease-in-out 200ms; 
+  transition: ease-in-out 200ms;
   transform: scale(1.1);
 }
 
-
-.scrollUpBtn svg{
-  color: var(--text-primary-color-2);
-  transition: ease-in-out 200ms; 
-
-
+.scrollUpBtn svg {
+  color: var(--text-primary-2);
+  transition: ease-in-out 200ms;
 }
 
-.scrollUpBtn svg:hover{
-  color: var(--text-primary-color-1);
-  transition: ease-in-out 200ms; 
-
-
+.scrollUpBtn svg:hover {
+  color: var(--text-primary-1);
+  transition: ease-in-out 200ms;
 }

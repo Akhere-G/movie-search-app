@@ -1,39 +1,37 @@
-.pagination{
+.pagination {
   width: 100%;
   margin: auto;
 }
 
-.container{
+.container {
   width: 100%;
-  margin: 1em auto; 
+  margin: 1em auto;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-.page{
+.page {
   padding: 0.3em 0.7em;
   margin: 0.15em;
   border-radius: 5%;
   text-align: center;
   display: flex;
-  background-color: var(--primary-background-color-2);
+  background-color: var(--primary-bg-2);
   cursor: pointer;
   transition: var(--transition);
-
 }
 
-.pageNoClick{
+.pageNoClick {
   cursor: default;
   color: #444;
 }
 
-.pageNoClick:hover{
-  color: var(--text-primary-color-2);
+.pageNoClick:hover {
+  color: var(--text-primary-2);
   transition: var(--transition);
-
 }
 
-.pageActive{
+.pageActive {
   color: var(--primary-color-1);
 }

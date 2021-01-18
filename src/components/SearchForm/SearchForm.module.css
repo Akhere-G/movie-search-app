@@ -1,34 +1,29 @@
-.searchForm{
+.searchForm {
   width: 100%;
-  max-width: 1170px;
+  max-width: var(--max-width);
   margin: 0 auto;
-
 }
 
-.center{
+.center {
   width: 100%;
   display: flex;
-  background-color: var(--primary-background-color-2);
+  background-color: var(--primary-bg-2);
   padding: 1rem;
   border-radius: 0.3rem;
   align-items: center;
   justify-content: center;
 }
 
-.label{
+.label {
   margin: 0 0.8rem;
   font-size: 1.8em;
-  
-
 }
 
-.searchBar{
+.searchBar {
   margin-right: 0.8rem;
   width: 50%;
   border-radius: 0.3rem;
   border: none;
-  padding: 0.4rem 0.4rem  0.4rem 0.4rem;
+  padding: 0.4rem 0.4rem 0.4rem 0.4rem;
   font-size: 1.3em;
-
 }
-
