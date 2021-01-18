@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useGlobalState } from "../context";
-import Movie from "./Movie";
-import styles from "../styles/MovieList.module.css";
-import Pagination from "../components/Pagination";
-import Loader from "./Loader";
-const MovieList = () => {
+import { useGlobalState } from "../../context";
+import Movie from "./Movie/Movie";
+import styles from "./MovieList.module.css";
+import Pagination from "./Pagination/Pagination";
+import Loader from "../Loader/Loader";
+const Movies = () => {
   const {
     loading,
     movies: allMovies,
@@ -50,4 +50,4 @@ const MovieList = () => {
   );
 };
 
-export default MovieList;
+export default Movies;

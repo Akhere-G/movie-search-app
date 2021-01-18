@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
-import styles from "../styles/ScrollUpBtn.module.css";
+import styles from "./ScrollUpBtn.module.css";
 
 const ScrollUpBtn = () => {
   const [showScroll, setShowScroll] = useState(false);

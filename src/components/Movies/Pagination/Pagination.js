@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "../styles/Pagination.module.css";
+import styles from "./Pagination.module.css";
 const Pagination = ({
   searchPage,
   setSearchPage,

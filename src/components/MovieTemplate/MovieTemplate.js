@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import styles from "../styles/MovieTemplate.module.css";
+import styles from "./MovieTemplate.module.css";
 
 const MovieTemplate = ({
   genres,

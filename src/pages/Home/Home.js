@@ -1,12 +1,11 @@
 import React from "react";
-import SearchForm from "../components/SearchForm";
-import MovieList from "../components/MovieList";
+import { SearchForm, Movies } from "../../components";
 
 const Home = () => {
   return (
     <section className='section'>
       <SearchForm />
-      <MovieList />
+      <Movies />
     </section>
   );
 };

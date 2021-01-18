@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
-import styles from "../styles/SearchForm.module.css";
-import { useGlobalState } from "../context";
+import styles from "./SearchForm.module.css";
+import { useGlobalState } from "../../context";
 
 const SearchForm = () => {
   const { searchTerm, setSearchTerm } = useGlobalState();

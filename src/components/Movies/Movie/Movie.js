@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../styles/Movie.module.css";
-import notFoundSrc from "../images/ImageNotFound.png";
+import styles from "./Movie.module.css";
+import notFoundSrc from "../../../images/ImageNotFound.png";
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
 import ImageLoader from "./ImageLoader";

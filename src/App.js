@@ -1,12 +1,7 @@
-import styles from "./styles/App.module.css";
+import styles from "./App.module.css";
 import { Switch, Route } from "react-router-dom";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Error from "./pages/Error";
-import Home from "./pages/Home";
-import MovieTemplateContainer from "./pages/MovieTemplateContainer";
-import Navbar from "./components/Navbar";
-import ScrollUpBtn from "./components/ScrollUpBtn";
+import { About, Contact, Error, Home, MovieTemplatePage } from "./pages";
+import { ScrollUpBtn, Navbar } from "./components";
 
 function App() {
   return (
@@ -24,7 +19,7 @@ function App() {
             <Contact />
           </Route>
           <Route path='/movie/:id'>
-            <MovieTemplateContainer />
+            <MovieTemplatePage />
           </Route>
           <Route exact path='*'>
             <Error />

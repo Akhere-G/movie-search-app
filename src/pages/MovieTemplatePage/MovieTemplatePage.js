@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import { useParams } from "react-router-dom";
-import styles from "../styles/MovieTemplate.module.css";
-import notFoundSrc from "../images/ImageNotFound.png";
-import MovieTemplate from "../components/MovieTemplate";
+import styles from "./MovieTemplatePage.module.css";
+import notFoundSrc from "../../images/ImageNotFound.png";
+import { MovieTemplate } from "../../components";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-const MovieTemplateContainer = () => {
+const MovieTemplatePage = () => {
   const heroRef = useRef(null);
   const [loading, setLoading] = useState(true);
   const [movieInfo, setMovieInfo] = useState(null);
@@ -83,4 +83,4 @@ const MovieTemplateContainer = () => {
   );
 };
 
-export default MovieTemplateContainer;
+export default MovieTemplatePage;
